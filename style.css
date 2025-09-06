@@ -75,6 +75,29 @@ img{
 }
 
 /*Hero*/
+
+.hero {
+    margin-bottom: 50px;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-poster img {
+    max-width: 350px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px; /* Optional */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Optional */
+}
+.hero .hero-text {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+/*
 .hero {
     margin-bottom: 50px;
     
@@ -96,9 +119,31 @@ img{
     width: 70%;
     margin-bottom: 20px;
 }
+    */
 
+.hero-subheading {
+    font-size: 1rem;      /* Adjust size as needed */
+    font-style: italic;   /* Ensures italic */
+    display: block;       /* Places it on its own line */
+    margin-top: 0.5rem;   /* Optional: adds spacing above */
+  
+}
+
+
+.hero-poster img {
+
+    max-width: 350px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Optional: subtle shadow */
+    padding-bottom: 40px;
+}
 
 /*Video*/
+.video-heading {
+    padding-top: 20px;
+    color: #000;
+}
 .video {
     padding: 10px 0 40px;
 
@@ -114,10 +159,11 @@ img{
     margin-bottom: 20px;
 }
 
+
 /*Testimonials*/
 
 .testimonials {
-    padding: 40px 0;
+    padding: 10px 0;
 }
 
 .testimonials .testimonials-heading {
@@ -135,6 +181,7 @@ img{
     margin-top: 30px;
     font-weight: bold;
 }
+
 
 /*FAQ*/
 .faq {
@@ -467,4 +514,98 @@ img{
     .text-xxl {
         font-size: 2rem;
     }
+}
+
+/* About Page */
+.about {
+    padding: 60px 0;
+}
+
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Chat Box */
+* {
+    box-sizing: border-box;
+}
+
+.chat-popup {
+    display: none;
+    /* Add any other styles you want for positioning */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }

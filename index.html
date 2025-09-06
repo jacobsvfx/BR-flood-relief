@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/Lotus.ico" type="image/x-icon" />
 </head>
+
+<script>
+function translateToPortuguese() {
+    window.location.href = "https://translate.google.com/translate?hl=pt&sl=auto&u=" + encodeURIComponent(window.location.href);
+}
+</script>
+
 <body>
     <nav class="navbar">
         <div class="container">
@@ -25,16 +32,22 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="about.html">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a class= "btn"  href="weathermap.html">Brazil Weather Map</a>
                     </li>
                     <li>
-                        <a class="btn" href="#">
-                            <i class="fas fa-user"></i> Log In
+                        <a class="btn" href="leptomap.html">
+                          Leptospirosis Case Tracking Map
                         </a>
                     </li>
+                    <li>
+                        <a href="acknowledgements.html">Acknowledgements</a>
+                    </li>
+                        <li>
+                             <button class="btn" onclick="translateToPortuguese()">Translate</button>
+                        </li>
                 </ul>
             </div>
             <!--Hamburger-->
@@ -49,16 +62,22 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="about.html">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="weathermap.html">Brazil Weather Map</a>
                     </li>
                     <li>
-                        <a class="btn" href="#">
-                            <i class="fas fa-user"></i> Log In
+                        <a class="btn" href="leptomap.html">
+                           <i class="fas fa-user"></i> Leptospirosis Case Tracking Map
                         </a>
                     </li>
+                    <li>
+                        <a href="acknowledgements.html">Acknowledgements</a>
+                    </li>
+                    <li>
+                        <button class="btn" onclick="translateToPortuguese()">Translate</button>
+                        </li>
                 </ul>
             </div>
         </div>
@@ -67,8 +86,49 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
+            <div>
+                <h1 class="hero-heading text-xxl">
+                    BRFloodRelief<br>
+                    <em>A community solution to flooding in Brazil</em>   
+                </h1>
+                <p class="hero-text">
+                    Collaborating with local government officials and international health organizations has given us the amazing opportunity to assist the citizens of Rio Grande do Sul with the ongoing bacterial spread caused by major flooding.
+                    <br><br>
+                    Almost half a million people have already lost their homes, being forced to leave and find shelter elsewhere. We want to stop these floods from hurting any more people than they already have, as much as possible. Consider scrolling through our website to find out more about what YOU can do to help. 
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" onclick="openForm()">Chat With Our Staff</a>
+                    <a href="https://www.reddit.com/r/brazilfloodrelief/" class="btn"><i class="fas fa-laptop"></i> Join A Community Forum</a>
+                </div>
+            </div>
+            <div class="hero-poster">
+                <img src="images/Flood Relief Poster.jpeg" alt="Flood Relief Poster">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Chat Box-->
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+     <!--
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
             <h1 class="hero-heading text-xxl">
-                A community solution to flooding in Brazil    
+                 BRFloodRelief<br>
+                 <em>A community solution to flooding in Brazil</em>   
              </h1>
              <p class="hero-text">
                 Collaborating with local government officials and international health organizations has given us the amazing opportunity to assist the citizens of Rio Grande do Sul with the ongoing bacterial spread caused by major flooding.
@@ -81,22 +141,23 @@ Almost half a million people have already lost their homes, being forced to leav
              </div>
         </div>
     </div>
+    <div class="hero-poster">
+        <img src="images/Flood Relief Poster.jpeg" alt="Flood Relief Poster">
+    </div>
 </section>
+-->
 <!--Video Sect-->
+
 <section class="video bg-black">
     <div class="container">
         <h2 class="video-heading text-xl text-center">
-            See how it works and get started in less than 2 minutes!
+            See what is happening in Brazil right now 
         </h2>
         <div class="video-content">
-            <a href="#">
-                <img src="images/video-preview.png" alt="video"
-                class="video-preview"/>
-            </a>
-            <a href="#" class="btn btn-primary">Get Started</a>
-
-
-
+           <video class="video-preview" controls width="100%">
+           <source src="images/Flooding.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+              </video>
         </div>
     </div>
 </section>
@@ -108,6 +169,7 @@ Almost half a million people have already lost their homes, being forced to leav
         </h3>
         <div class="testimonials-grid">
             <div class="card">
+                   <img src="images/Image 1.png" alt="Testimonial 1" class="testimonial-img">
                 <p>
                     This is a great initiative! I am so glad to see that people are coming together to help those affected by the floods. Let's keep supporting each other and make a real difference!
                 </p>
@@ -121,6 +183,7 @@ Almost half a million people have already lost their homes, being forced to leav
                 </p>
             </div>
             <div class="card">
+                   <img src="images/Image 2.png" alt="Testimonial 2" class="testimonial-img">
                 <p>
                     I found this website incredibly helpful and inspiring. The resources and guidance offered made it easy for me to contribute to flood relief efforts in Brazil. It's heartwarming to see such a dedicated platform supporting those in need!
                 </p>
@@ -134,6 +197,7 @@ Almost half a million people have already lost their homes, being forced to leav
                 </p>
             </div>
             <div class="card">
+                   <img src="images/Image 3.png" alt="Testimonial 3" class="testimonial-img">
                 <p>
                 I was deeply moved by the support and resources provided here. The information helped my family stay safe and healthy during the floods. Thank you for making a difference in our community!
                 </p>
@@ -156,11 +220,7 @@ Almost half a million people have already lost their homes, being forced to leav
         <h3 class="text-xl text-center">
             Frequently Asked Questions
         </h3>
-        <ul class="faq-menu">
-            <li class="active">All</li>
-            <li>Getting Started</li>
-           <!--- <li>Pricing</li>-->
-        </ul>
+     
         <div class="faq-content">
             <div class="faq-group">
                 <div class="faq-group-header">
